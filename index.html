@@ -5,73 +5,185 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pavit Kaur Sra - Resume</title>
     <style>
-      body {
-        font-family: "Arial", sans-serif;
-        line-height: 1.6;
-        margin: 0;
-        background: linear-gradient(to bottom, #f4f4f9, #fff);
-        color: #333;
-        padding: 20px;
-      }
-      .container {
-        max-width: 900px;
-        margin: auto;
-        padding: 20px;
-        background-color: #ffffff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-      }
-      h1, h2, h3 {
-        color: #2e6c80;
-        margin-bottom: 10px;
-      }
-      h1 {
-        text-align: center;
-        font-size: 2.5em;
-      }
-      p, ul li {
-        margin-bottom: 8px;
-      }
-      ul {
-        padding-left: 20px;
-      }
-      .contact {
-        text-align: center;
-        margin-bottom: 30px;
-      }
-      .contact p {
-        margin: 5px 0;
-      }
-      a {
-        color: #2e6c80;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      .section {
-        margin-bottom: 40px;
-      }
-      .skills, .languages {
-        display: flex;
-        flex-wrap: wrap;
-      }
-      .skills div, .languages div {
-        width: 50%;
-      }
-      .skills div strong, .languages div strong {
-        color: #444;
-      }
-      .certification {
-        margin-bottom: 20px;
-      }
-      footer {
-        text-align: center;
-        margin-top: 20px;
-        font-size: 0.9em;
-        color: #888;
-      }
+     /* General Body Styling */
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  background: linear-gradient(to bottom, #f4f4f9, #fff);
+  color: #333;
+  padding: 20px;
+}
+
+/* Container for Layout */
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+  color: #2e6c80;
+  margin-bottom: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+}
+
+/* Text Elements */
+p,
+ul li {
+  margin-bottom: 8px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+/* Contact Section */
+.contact {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact p {
+  margin: 5px 0;
+}
+
+/* Links */
+a {
+  color: #2e6c80;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Section Styling */
+.section {
+  margin-bottom: 40px;
+  padding: 2rem;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Project Styling */
+.project h3 {
+  font-size: 1.5rem;
+  color: #0073e6;
+  margin-bottom: 0.5rem;
+}
+
+.project p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Project Links */
+.project a {
+  text-decoration: none;
+  color: #0073e6;
+  font-weight: bold;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+/* Technologies */
+.project p strong {
+  color: #444;
+}
+
+/* Bullet Points Styling */
+.project ul {
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+  list-style-type: disc;
+  color: #555;
+}
+
+.project ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.project ul li code {
+  background-color: #e8f0fe;
+  padding: 0.2rem 0.4rem;
+  border-radius: 5px;
+  font-family: "Courier New", Courier, monospace;
+  color: #0073e6;
+}
+
+/* Skills and Languages */
+.skills,
+.languages {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills div,
+.languages div {
+  width: 50%;
+}
+
+.skills div strong,
+.languages div strong {
+  color: #444;
+}
+
+/* Certification Section */
+.certification {
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  .project h3 {
+    font-size: 1.2rem;
+  }
+
+  .project p,
+  .project ul li {
+    font-size: 0.9rem;
+  }
+
+  .skills div,
+  .languages div {
+    width: 100%;
+  }
+}
+
     </style>
   </head>
   <body>
@@ -94,88 +206,101 @@
       </div>
 
      <div class="section">
-  <h2>Projects</h2>
-
-  <h3>Number Guesser</h3>
-  <p>
-    <a href="https://github.com/Pavitt55/Number-Guesser">GitHub Repository</a>
-  </p>
-  <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
-  <ul>
-    <li>Developed a fun and interactive number guessing game.</li>
-    <li>
-      The player guesses a randomly generated number between 1 and 20 within 20 attempts.
-    </li>
-    <li>
-      Utilized <code>Math.trunc</code> and <code>Math.random</code> for number generation and logic.
-    </li>
-    <li>
-      Provides feedback on each guess, indicating if the number is too high, too low, or correct.
-    </li>
-  </ul>
-
-  <h3>Dice Roller</h3>
-  <p>
-    <a href="https://github.com/Pavitt55/Dice-Roller">GitHub Repository</a>
-  </p>
-  <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
-  <ul>
-    <li>Created a simple and fun two-player dice game.</li>
-    <li>Players take turns rolling the dice to reach a score of 20 first.</li>
-    <li>
-      Rolling a 1 resets the current score, and the turn passes to the other player.
-    </li>
-    <li>The game ends when a player's total score reaches or exceeds 20.</li>
-  </ul>
-
-  <h3>Dynamic Portfolio Manager</h3>
-  <p>
-    <a href="https://github.com/Pavitt55/Dynamic-Portfolio-Manager">GitHub Repository</a>
-  </p>
-  <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
-  <ul>
-    <li>
-      Designed a dynamic portfolio application to manage project cards with add, edit, and delete options.
-    </li>
-    <li>Integrated real-time previews for uploaded project screenshots.</li>
-    <li>
-      Implemented localStorage to persist project data across sessions.
-    </li>
-    <li>Developed a responsive UI for smooth portfolio management.</li>
-  </ul>
-
-  <h3>AccountSafe</h3>
-  <p>
-    <a href="https://github.com/Pavitt55/AccountSafe">GitHub Repository</a>
-  </p>
-  <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
-  <ul>
-    <li>Built a bank account management system with interactive features.</li>
-    <li>
-      Added functionalities such as money transfers, loan requests, and account closures.
-    </li>
-    <li>
-      Implemented advanced JavaScript features like sorting transactions, currency formatting, and a logout timer.
-    </li>
-    <li>Provided a responsive UI for seamless user experience.</li>
-  </ul>
-
-  <h3>Interactive Webpage</h3>
-  <p>
-    <a href="https://github.com/Pavitt55/Interactive-Webpage">GitHub Repository</a>
-  </p>
-  <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
-  <ul>
-    <li>
-      Developed a static webpage with dynamic features like lazy image loading and section reveals on scroll.
-    </li>
-    <li>Used <code>.isIntersecting</code> for scroll-based triggers.</li>
-    <li>
-      Added smooth scrolling functionality with <code>scrollIntoView</code>.
-    </li>
-    <li>Focused on user experience with advanced DOM manipulation.</li>
-  </ul>
+  <h2>🌟 Projects</h2>
+  
+  <div class="project">
+    <h3>🎯 Number Guesser</h3>
+    <p>
+      <a href="https://github.com/Pavitt55/Number-Guesser">GitHub Repository</a>
+    </p>
+    <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
+    <ul>
+      <li>Interactive number guessing game with feedback on guesses.</li>
+      <li>
+        Players guess a number between 1-20 within 20 attempts, using 
+        <code>Math.trunc</code> and <code>Math.random</code>.
+      </li>
+      <li>
+        Designed an engaging user interface with immediate feedback (too high, too low, correct).
+      </li>
+    </ul>
+  </div>
+  
+  <div class="project">
+    <h3>🎲 Dice Roller</h3>
+    <p>
+      <a href="https://github.com/Pavitt55/Dice-Roller">GitHub Repository</a>
+    </p>
+    <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
+    <ul>
+      <li>Two-player dice game where players compete to score 20 first.</li>
+      <li>
+        Game logic includes turn resets on rolling 1 and dynamic score tracking.
+      </li>
+      <li>
+        Clean and responsive design for enhanced playability across devices.
+      </li>
+    </ul>
+  </div>
+  
+  <div class="project">
+    <h3>📁 Dynamic Portfolio Manager</h3>
+    <p>
+      <a href="https://github.com/Pavitt55/Dynamic-Portfolio-Manager">GitHub Repository</a>
+    </p>
+    <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
+    <ul>
+      <li>
+        Created a portfolio application enabling users to add, edit, and delete project cards.
+      </li>
+      <li>
+        Integrated **localStorage** for session persistence of project data.
+      </li>
+      <li>
+        Added real-time previews of project screenshots and dynamic updates.
+      </li>
+      <li>Built a user-friendly, responsive interface for seamless management.</li>
+    </ul>
+  </div>
+  
+  <div class="project">
+    <h3>💳 AccountSafe</h3>
+    <p>
+      <a href="https://github.com/Pavitt55/AccountSafe">GitHub Repository</a>
+    </p>
+    <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
+    <ul>
+      <li>Interactive bank account system with advanced JavaScript features.</li>
+      <li>
+        Implemented user authentication, transaction history, and balance updates.
+      </li>
+      <li>
+        Features include **money transfers**, **loan requests**, and account closures.
+      </li>
+      <li>Enhanced user experience with sorting, currency formatting, and timers.</li>
+    </ul>
+  </div>
+  
+  <div class="project">
+    <h3>🌐 Interactive Webpage</h3>
+    <p>
+      <a href="https://github.com/Pavitt55/Interactive-Webpage">GitHub Repository</a>
+    </p>
+    <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
+    <ul>
+      <li>
+        Developed a webpage with **lazy loading**, **scroll animations**, and event delegation.
+      </li>
+      <li>
+        Used advanced DOM manipulation techniques for a smooth user experience.
+      </li>
+      <li>
+        Added navigation enhancements like <code>scrollIntoView</code> for better usability.
+      </li>
+    </ul>
+  </div>
 </div>
+
 
 
       <div class="section">
