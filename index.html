@@ -7,7 +7,7 @@
     <style>
         /* CANADIAN ATS-FRIENDLY STYLING */
         body {
-            font-family: "Arial", "Helvetica", sans-serif; /* Standard web-safe fonts */
+            font-family: "Arial", "Helvetica", sans-serif;
             line-height: 1.4;
             margin: 0;
             padding: 0;
@@ -16,117 +16,92 @@
         }
 
         .container {
-            max-width: 800px;
+            max-width: 850px;
             margin: 20px auto;
-            padding: 20px;
+            padding: 30px;
+            border: 1px solid #eee;
         }
 
-        /* HEADER */
         header {
             text-align: center;
             border-bottom: 2px solid #000;
-            padding-bottom: 10px;
+            padding-bottom: 15px;
             margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 24pt;
+            font-size: 26pt;
             margin: 0;
-            text-transform: uppercase;
+            color: #2c3e50;
         }
 
         .contact-info {
             font-size: 10pt;
-            margin-top: 5px;
+            margin-top: 8px;
         }
 
         .contact-info a {
             color: #000;
             text-decoration: none;
-            border-bottom: 1px solid #ccc;
+            margin: 0 5px;
         }
 
-        /* SECTION HEADINGS */
         h2 {
             font-size: 12pt;
             text-transform: uppercase;
             border-bottom: 1px solid #000;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            margin-top: 25px;
+            margin-bottom: 12px;
             padding-bottom: 2px;
+            color: #2c3e50;
         }
 
-        h3 {
-            font-size: 11pt;
-            margin: 10px 0 2px 0;
+        .project-item {
+            margin-bottom: 18px;
         }
 
-        /* SKILLS TABLE */
-        .skills-section {
-            display: table;
-            width: 100%;
-            margin-bottom: 15px;
-        }
-
-        .skill-row {
-            display: table-row;
-        }
-
-        .skill-label {
-            display: table-cell;
-            font-weight: bold;
-            width: 25%;
-            padding: 2px 0;
-            font-size: 10pt;
-        }
-
-        .skill-values {
-            display: table-cell;
-            font-size: 10pt;
-        }
-
-        /* PROJECT LISTS */
-        .project-meta {
+        .project-header {
             display: flex;
             justify-content: space-between;
             font-weight: bold;
-            font-size: 10.5pt;
+            font-size: 11pt;
         }
 
-        .tech-italics {
+        .tech-stack {
             font-weight: normal;
             font-style: italic;
-            color: #444;
+            font-size: 9.5pt;
+            color: #555;
         }
 
         ul {
-            margin-top: 5px;
+            margin-top: 4px;
             padding-left: 20px;
         }
 
         li {
-            font-size: 10pt;
-            margin-bottom: 4px;
-            text-align: justify;
+            font-size: 9.5pt;
+            margin-bottom: 3px;
         }
 
-        .education-item {
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            font-size: 10pt;
+        }
+
+        .education-header {
             display: flex;
             justify-content: space-between;
-            margin-bottom: 2px;
+            font-weight: bold;
         }
 
-        /* FOOTER */
         footer {
             margin-top: 30px;
-            font-size: 8pt;
             text-align: center;
-            color: #777;
-        }
-
-        @media print {
-            .container { margin: 0; padding: 0; width: 100%; }
-            body { background-color: #fff; }
+            font-size: 8pt;
+            color: #999;
         }
     </style>
 </head>
@@ -134,7 +109,7 @@
 
 <div class="container">
     <header>
-        <h1>Pavit Kaur Sra</h1>
+        <h1>Pavit Kaur Sra, B.E.</h1>
         <p class="contact-info">
             Brampton, ON | +91 7658834855 | 
             <a href="mailto:pavittkaursra@gmail.com">pavittkaursra@gmail.com</a> | 
@@ -145,23 +120,11 @@
 
     <section>
         <h2>Technical Skills</h2>
-        <div class="skills-section">
-            <div class="skill-row">
-                <span class="skill-label">Languages:</span>
-                <span class="skill-values">JavaScript (ES6+), C++, HTML5, CSS3, SASS</span>
-            </div>
-            <div class="skill-row">
-                <span class="skill-label">Frameworks/Tools:</span>
-                <span class="skill-values">Node.js, Express, Parcel, Leaflet.js, Git, GitHub</span>
-            </div>
-            <div class="skill-row">
-                <span class="skill-label">Cloud/Databases:</span>
-                <span class="skill-values">AWS (Certified Cloud Practitioner), MySQL, LocalStorage API</span>
-            </div>
-            <div class="skill-row">
-                <span class="skill-label">Architecture:</span>
-                <span class="skill-values">Model-View-Controller (MVC), OOP, Functional Programming, REST APIs</span>
-            </div>
+        <div class="skills-grid">
+            <div><strong>Languages:</strong> JavaScript (ES6+), C++, HTML5, CSS3/SASS</div>
+            <div><strong>Frameworks:</strong> Node.js, Express, MVC Architecture</div>
+            <div><strong>Tools:</strong> Git, GitHub, Parcel, Leaflet.js</div>
+            <div><strong>Cloud/DB:</strong> AWS (Cloud Practitioner), MySQL, LocalStorage</div>
         </div>
     </section>
 
@@ -169,66 +132,102 @@
         <h2>Technical Projects</h2>
 
         <div class="project-item">
-            <div class="project-meta">
-                <span>Forkify – Recipe & Meal Management Application</span>
-                <span class="tech-italics">JavaScript, MVC Architecture, SASS, REST API</span>
+            <div class="project-header">
+                <span>Forkify – Recipe & Architecture Project</span>
+                <span class="tech-stack">JS (ES6+), MVC, REST API</span>
             </div>
             <ul>
-                <li>Architected a robust front-end application using the **Model-View-Controller (MVC)** pattern to ensure separation of concerns and maintainability.</li>
-                <li>Implemented advanced asynchronous logic with **Async/Await** and custom error handling for fetching data from 3rd-party REST APIs.</li>
-                <li>Developed dynamic features including portion adjustment logic, pagination, and a bookmarking system using the **LocalStorage API**.</li>
+                <li>Architected a recipe application using the **Model-View-Controller (MVC)** pattern for scalability.</li>
+                <li>Implemented **Async/Await** for API handling and dynamic UI updates for portions and bookmarks.</li>
             </ul>
         </div>
 
         <div class="project-item">
-            <div class="project-meta">
+            <div class="project-header">
                 <span>Mapty – Geolocation Workout Tracker</span>
-                <span class="tech-italics">JS Classes (OOP), Leaflet API, Geolocation API</span>
+                <span class="tech-stack">OOP, Leaflet API, Geolocation API</span>
             </div>
             <ul>
-                <li>Leveraged the **Browser Geolocation API** and **Leaflet.js** library to engineer an interactive map-based tracking system.</li>
-                <li>Utilized **Object-Oriented Programming (OOP)** through JS Classes to manage inheritance and data structures for various workout types.</li>
-                <li>Engineered data persistence across sessions using browser-based storage, allowing for consistent user data retrieval.</li>
+                <li>Engineered a fitness map app using **Object-Oriented Programming (OOP)** and the Leaflet library.</li>
+                <li>Integrated the **Geolocation API** to track workouts based on the user's real-time position.</li>
             </ul>
         </div>
-        
 
         <div class="project-item">
-            <div class="project-meta">
+            <div class="project-header">
                 <span>AccountSafe – Financial Logic Engine</span>
-                <span class="tech-italics">JavaScript, DOM Manipulation, Intl API</span>
+                <span class="tech-stack">JavaScript, DOM Manipulation, Intl API</span>
             </div>
             <ul>
-                <li>Developed a secure financial dashboard focusing on high-level DOM manipulation and array methods for real-time transaction processing.</li>
-                <li>Integrated the **Internationalization API (Intl)** for localized currency and date formatting, improving cross-region usability.</li>
-                <li>Implemented security features including multi-user authentication and automated session timeout logic.</li>
+                <li>Built a banking interface with user authentication, transaction history, and loan request logic.</li>
+                <li>Integrated currency and date formatting using the **Internationalization (Intl) API**.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span>Dynamic Portfolio Manager</span>
+                <span class="tech-stack">HTML5, CSS, LocalStorage</span>
+            </div>
+            <ul>
+                <li>Created a management tool for projects with full CRUD functionality (Create, Read, Update, Delete).</li>
+                <li>Used **LocalStorage** to persist project data and screenshots across browser sessions.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span>Interactive Webpage</span>
+                <span class="tech-stack">Advanced DOM, Lazy Loading</span>
+            </div>
+            <ul>
+                <li>Developed a high-performance webpage featuring **lazy-loading images** and smooth scroll animations.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span>Dice Roller Game</span>
+                <span class="tech-stack">JavaScript, Game Logic</span>
+            </div>
+            <ul>
+                <li>Two-player game with dynamic score tracking and turn-based logic.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <span>Number Guesser</span>
+                <span class="tech-stack">JavaScript, Math Logic</span>
+            </div>
+            <ul>
+                <li>Interactive game using `Math.random()` and `Math.trunc` for real-time guess feedback.</li>
             </ul>
         </div>
     </section>
 
     <section>
         <h2>Education</h2>
-        <div class="education-item">
-            <strong>Bachelor of Engineering in Computer Science (Cloud Computing)</strong>
+        <div class="education-header">
+            <span>B.E. in Computer Science (Cloud Computing)</span>
             <span>2020 – 2024</span>
         </div>
-        <p style="margin:0; font-size:10pt;">Chandigarh University — Kharar, India</p>
+        <p>Chandigarh University — Kharar, India</p>
     </section>
 
     <section>
         <h2>Certifications</h2>
         <ul>
-            <li><strong>AWS Certified Cloud Practitioner</strong> – Amazon Web Services (Validation Available)</li>
+            <li><strong>AWS Certified Cloud Practitioner</strong> – Amazon Web Services</li>
             <li><strong>The Complete JavaScript Course 2025</strong> – Jonas Schmedtmann (Udemy)</li>
-            <li><strong>Soft Skills Development Certification</strong> – DCPD, Chandigarh University</li>
+            <li><strong>Soft Skills Development</strong> – Chandigarh University</li>
         </ul>
     </section>
 
+    <footer>
+        <p>Designed by Pavit Kaur Sra © 2024 | References Available Upon Request</p>
+    </footer>
 </div>
-
-<footer>
-    <p>References provided upon request</p>
-</footer>
 
 </body>
 </html>
