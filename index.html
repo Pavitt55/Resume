@@ -3,140 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavit Kaur Sra - Resume</title>
+    <title>Pavit Kaur Sra - Software Engineer Resume</title>
     <style>
-        :root {
-            --primary-blue: #2c3e50;
-            --accent-blue: #34495e;
-            --text-main: #333;
-            --text-light: #666;
-            --bg-gray: #f4f7f6;
-        }
-
+        /* CANADIAN ATS-FRIENDLY STYLING */
         body {
-            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
-            line-height: 1.5;
+            font-family: "Arial", "Helvetica", sans-serif; /* Standard web-safe fonts */
+            line-height: 1.4;
             margin: 0;
-            background-color: var(--bg-gray);
-            color: var(--text-main);
-            padding: 40px 20px;
+            padding: 0;
+            background-color: #fff;
+            color: #000;
         }
 
         .container {
-            max-width: 850px;
-            margin: auto;
-            background-color: #fff;
-            padding: 50px;
-            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-            border-top: 8px solid var(--primary-blue);
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
         }
 
-        /* Header Styling */
+        /* HEADER */
         header {
             text-align: center;
-            border-bottom: 2px solid #eee;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
+            border-bottom: 2px solid #000;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         h1 {
-            font-size: 2.2em;
+            font-size: 24pt;
             margin: 0;
-            color: var(--primary-blue);
             text-transform: uppercase;
-            letter-spacing: 1px;
         }
 
         .contact-info {
-            margin-top: 10px;
-            font-size: 0.95em;
-            color: var(--text-light);
+            font-size: 10pt;
+            margin-top: 5px;
         }
 
         .contact-info a {
-            color: var(--primary-blue);
+            color: #000;
             text-decoration: none;
-            margin: 0 5px;
+            border-bottom: 1px solid #ccc;
         }
 
-        /* Section Headings */
+        /* SECTION HEADINGS */
         h2 {
-            font-size: 1.3em;
-            border-bottom: 1px solid var(--primary-blue);
-            color: var(--primary-blue);
+            font-size: 12pt;
             text-transform: uppercase;
-            margin-top: 30px;
-            padding-bottom: 5px;
-            letter-spacing: 1px;
+            border-bottom: 1px solid #000;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            padding-bottom: 2px;
         }
 
         h3 {
-            margin: 15px 0 5px 0;
-            font-size: 1.1em;
-            color: var(--accent-blue);
+            font-size: 11pt;
+            margin: 10px 0 2px 0;
         }
 
-        .date-location {
+        /* SKILLS TABLE */
+        .skills-section {
+            display: table;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .skill-row {
+            display: table-row;
+        }
+
+        .skill-label {
+            display: table-cell;
+            font-weight: bold;
+            width: 25%;
+            padding: 2px 0;
+            font-size: 10pt;
+        }
+
+        .skill-values {
+            display: table-cell;
+            font-size: 10pt;
+        }
+
+        /* PROJECT LISTS */
+        .project-meta {
             display: flex;
             justify-content: space-between;
+            font-weight: bold;
+            font-size: 10.5pt;
+        }
+
+        .tech-italics {
+            font-weight: normal;
             font-style: italic;
-            color: var(--text-light);
-            font-size: 0.9em;
-            margin-bottom: 10px;
-        }
-
-        /* Project & Work Experience */
-        .project-item {
-            margin-bottom: 25px;
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
-
-        .tech-stack {
-            font-size: 0.85em;
-            background: #eff3f6;
-            padding: 2px 8px;
-            border-radius: 4px;
-            color: var(--accent-blue);
-            font-weight: 600;
+            color: #444;
         }
 
         ul {
-            padding-left: 18px;
-            margin-top: 8px;
+            margin-top: 5px;
+            padding-left: 20px;
         }
 
-        ul li {
-            margin-bottom: 6px;
-            font-size: 0.95em;
+        li {
+            font-size: 10pt;
+            margin-bottom: 4px;
+            text-align: justify;
         }
 
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+        .education-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 2px;
         }
 
-        .skill-cat strong {
-            color: var(--primary-blue);
-        }
-
-        /* Footer */
+        /* FOOTER */
         footer {
+            margin-top: 30px;
+            font-size: 8pt;
             text-align: center;
-            margin-top: 40px;
-            font-size: 0.8em;
-            color: #aaa;
+            color: #777;
         }
 
         @media print {
-            body { padding: 0; background: none; }
-            .container { box-shadow: none; border: none; width: 100%; }
+            .container { margin: 0; padding: 0; width: 100%; }
+            body { background-color: #fff; }
         }
     </style>
 </head>
@@ -145,92 +135,100 @@
 <div class="container">
     <header>
         <h1>Pavit Kaur Sra</h1>
-        <div class="contact-info">
-            Brampton, ON (Open to Relocation) | +91 7658834855<br>
+        <p class="contact-info">
+            Brampton, ON | +91 7658834855 | 
             <a href="mailto:pavittkaursra@gmail.com">pavittkaursra@gmail.com</a> | 
             <a href="https://linkedin.com/in/pavit-kaur-sra5">LinkedIn</a> | 
             <a href="https://github.com/Pavitt55">GitHub</a>
-        </div>
+        </p>
     </header>
 
     <section>
-        <h2>Professional Summary</h2>
-        <p>Detail-oriented Software Engineer with a B.E. in Computer Science (Cloud Computing). Expert in building responsive, high-performance web applications using modern JavaScript (ES6+), Node.js, and AWS. Proven track record of architecting scalable front-end solutions and integrating complex REST APIs.</p>
-    </section>
-
-    <section>
         <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-cat"><strong>Languages:</strong> JavaScript (ES6+), C++, C, HTML5, CSS3/SASS</div>
-            <div class="skill-cat"><strong>Frameworks/Libs:</strong> Node.js, Express, MVC Architecture</div>
-            <div class="skill-cat"><strong>Cloud/DevOps:</strong> AWS (Cloud Practitioner), Git, GitHub</div>
-            <div class="skill-cat"><strong>Databases:</strong> MySQL, LocalStorage Persistence</div>
+        <div class="skills-section">
+            <div class="skill-row">
+                <span class="skill-label">Languages:</span>
+                <span class="skill-values">JavaScript (ES6+), C++, HTML5, CSS3, SASS</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Frameworks/Tools:</span>
+                <span class="skill-values">Node.js, Express, Parcel, Leaflet.js, Git, GitHub</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Cloud/Databases:</span>
+                <span class="skill-values">AWS (Certified Cloud Practitioner), MySQL, LocalStorage API</span>
+            </div>
+            <div class="skill-row">
+                <span class="skill-label">Architecture:</span>
+                <span class="skill-values">Model-View-Controller (MVC), OOP, Functional Programming, REST APIs</span>
+            </div>
         </div>
     </section>
 
     <section>
-        <h2>Projects</h2>
+        <h2>Technical Projects</h2>
 
         <div class="project-item">
-            <div class="project-header">
-                <h3>Forkify – Advanced Recipe Application</h3>
-                <span class="tech-stack">JS (ES6+), SASS, MVC, REST API</span>
+            <div class="project-meta">
+                <span>Forkify – Recipe & Meal Management Application</span>
+                <span class="tech-italics">JavaScript, MVC Architecture, SASS, REST API</span>
             </div>
             <ul>
-                <li>Architected a complex recipe search engine using the **Model-View-Controller (MVC)** design pattern to ensure code maintainability and scalability.</li>
-                <li>Implemented advanced JavaScript features including **Async/Await**, custom Error Handling, and multi-page results pagination.</li>
-                <li>Developed features for adjusting ingredient portions dynamically and a "bookmarking" system persisted via browser API.</li>
-                <li>Optimized UI performance by implementing a custom parcel-based build workflow.</li>
+                <li>Architected a robust front-end application using the **Model-View-Controller (MVC)** pattern to ensure separation of concerns and maintainability.</li>
+                <li>Implemented advanced asynchronous logic with **Async/Await** and custom error handling for fetching data from 3rd-party REST APIs.</li>
+                <li>Developed dynamic features including portion adjustment logic, pagination, and a bookmarking system using the **LocalStorage API**.</li>
             </ul>
         </div>
 
         <div class="project-item">
-            <div class="project-header">
-                <h3>AccountSafe – Financial Management Interface</h3>
-                <span class="tech-stack">JavaScript, DOM Manipulation, CSS3</span>
+            <div class="project-meta">
+                <span>Mapty – Geolocation Workout Tracker</span>
+                <span class="tech-italics">JS Classes (OOP), Leaflet API, Geolocation API</span>
             </div>
             <ul>
-                <li>Engineered a secure banking dashboard featuring user authentication, real-time balance calculations, and transaction filtering.</li>
-                <li>Integrated high-level functionality including simulated money transfers, loan approvals, and currency localization.</li>
-                <li>Enhanced security UX with automated session logout timers and multi-user login state management.</li>
+                <li>Leveraged the **Browser Geolocation API** and **Leaflet.js** library to engineer an interactive map-based tracking system.</li>
+                <li>Utilized **Object-Oriented Programming (OOP)** through JS Classes to manage inheritance and data structures for various workout types.</li>
+                <li>Engineered data persistence across sessions using browser-based storage, allowing for consistent user data retrieval.</li>
             </ul>
         </div>
+        
 
         <div class="project-item">
-            <div class="project-header">
-                <h3>Dynamic Portfolio Manager</h3>
-                <span class="tech-stack">JavaScript, HTML5, LocalStorage</span>
+            <div class="project-meta">
+                <span>AccountSafe – Financial Logic Engine</span>
+                <span class="tech-italics">JavaScript, DOM Manipulation, Intl API</span>
             </div>
             <ul>
-                <li>Developed a CRUD-based application allowing users to manage project portfolios with real-time image previews.</li>
-                <li>Utilized **LocalStorage** to ensure 100% data persistence across user sessions.</li>
-                <li>Designed a fully responsive layout ensuring cross-browser compatibility and mobile-first accessibility.</li>
+                <li>Developed a secure financial dashboard focusing on high-level DOM manipulation and array methods for real-time transaction processing.</li>
+                <li>Integrated the **Internationalization API (Intl)** for localized currency and date formatting, improving cross-region usability.</li>
+                <li>Implemented security features including multi-user authentication and automated session timeout logic.</li>
             </ul>
         </div>
     </section>
 
     <section>
         <h2>Education</h2>
-        <div class="project-header">
-            <h3>Bachelor of Engineering in Computer Science (Cloud Computing)</h3>
+        <div class="education-item">
+            <strong>Bachelor of Engineering in Computer Science (Cloud Computing)</strong>
             <span>2020 – 2024</span>
         </div>
-        <p>Chandigarh University | Kharar, India</p>
+        <p style="margin:0; font-size:10pt;">Chandigarh University — Kharar, India</p>
     </section>
 
     <section>
         <h2>Certifications</h2>
         <ul>
-            <li><strong>AWS Certified Cloud Practitioner</strong> – Amazon Web Services</li>
-            <li><strong>The Complete JavaScript Course 2024 (Jonas Schmedtmann)</strong> – Udemy</li>
-            <li><strong>Soft Skills Development</strong> – DCPD, Chandigarh University</li>
+            <li><strong>AWS Certified Cloud Practitioner</strong> – Amazon Web Services (Validation Available)</li>
+            <li><strong>The Complete JavaScript Course 2025</strong> – Jonas Schmedtmann (Udemy)</li>
+            <li><strong>Soft Skills Development Certification</strong> – DCPD, Chandigarh University</li>
         </ul>
     </section>
 
-    <footer>
-        <p>References available upon request</p>
-    </footer>
 </div>
+
+<footer>
+    <p>References provided upon request</p>
+</footer>
 
 </body>
 </html>
