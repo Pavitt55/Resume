@@ -1,333 +1,236 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pavit Kaur Sra - Resume</title>
     <style>
-     /* General Body Styling */
-body {
-  font-family: "Arial", sans-serif;
-  line-height: 1.6;
-  margin: 0;
-  background: linear-gradient(to bottom, #f4f4f9, #fff);
-  color: #333;
-  padding: 20px;
-}
+        :root {
+            --primary-blue: #2c3e50;
+            --accent-blue: #34495e;
+            --text-main: #333;
+            --text-light: #666;
+            --bg-gray: #f4f7f6;
+        }
 
-/* Container for Layout */
-.container {
-  max-width: 900px;
-  margin: auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
+        body {
+            font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+            line-height: 1.5;
+            margin: 0;
+            background-color: var(--bg-gray);
+            color: var(--text-main);
+            padding: 40px 20px;
+        }
 
-/* Typography */
-h1,
-h2,
-h3 {
-  color: #2e6c80;
-  margin-bottom: 10px;
-}
+        .container {
+            max-width: 850px;
+            margin: auto;
+            background-color: #fff;
+            padding: 50px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+            border-top: 8px solid var(--primary-blue);
+        }
 
-h1 {
-  text-align: center;
-  font-size: 2.5em;
-}
+        /* Header Styling */
+        header {
+            text-align: center;
+            border-bottom: 2px solid #eee;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+        }
 
-/* Text Elements */
-p,
-ul li {
-  margin-bottom: 8px;
-}
+        h1 {
+            font-size: 2.2em;
+            margin: 0;
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-ul {
-  padding-left: 20px;
-}
+        .contact-info {
+            margin-top: 10px;
+            font-size: 0.95em;
+            color: var(--text-light);
+        }
 
-/* Contact Section */
-.contact {
-  text-align: center;
-  margin-bottom: 30px;
-}
+        .contact-info a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            margin: 0 5px;
+        }
 
-.contact p {
-  margin: 5px 0;
-}
+        /* Section Headings */
+        h2 {
+            font-size: 1.3em;
+            border-bottom: 1px solid var(--primary-blue);
+            color: var(--primary-blue);
+            text-transform: uppercase;
+            margin-top: 30px;
+            padding-bottom: 5px;
+            letter-spacing: 1px;
+        }
 
-/* Links */
-a {
-  color: #2e6c80;
-  text-decoration: none;
-}
+        h3 {
+            margin: 15px 0 5px 0;
+            font-size: 1.1em;
+            color: var(--accent-blue);
+        }
 
-a:hover {
-  text-decoration: underline;
-}
+        .date-location {
+            display: flex;
+            justify-content: space-between;
+            font-style: italic;
+            color: var(--text-light);
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
 
-/* Section Styling */
-.section {
-  margin-bottom: 40px;
-  padding: 2rem;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+        /* Project & Work Experience */
+        .project-item {
+            margin-bottom: 25px;
+        }
 
-/* Project Styling */
-.project h3 {
-  font-size: 1.5rem;
-  color: #0073e6;
-  margin-bottom: 0.5rem;
-}
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+        }
 
-.project p {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  color: #555;
-}
+        .tech-stack {
+            font-size: 0.85em;
+            background: #eff3f6;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--accent-blue);
+            font-weight: 600;
+        }
 
-/* Project Links */
-.project a {
-  text-decoration: none;
-  color: #0073e6;
-  font-weight: bold;
-}
+        ul {
+            padding-left: 18px;
+            margin-top: 8px;
+        }
 
-.project a:hover {
-  text-decoration: underline;
-}
+        ul li {
+            margin-bottom: 6px;
+            font-size: 0.95em;
+        }
 
-/* Technologies */
-.project p strong {
-  color: #444;
-}
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
 
-/* Bullet Points Styling */
-.project ul {
-  margin-top: 0.5rem;
-  margin-bottom: 1.5rem;
-  padding-left: 1.5rem;
-  list-style-type: disc;
-  color: #555;
-}
+        .skill-cat strong {
+            color: var(--primary-blue);
+        }
 
-.project ul li {
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
-}
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 0.8em;
+            color: #aaa;
+        }
 
-.project ul li code {
-  background-color: #e8f0fe;
-  padding: 0.2rem 0.4rem;
-  border-radius: 5px;
-  font-family: "Courier New", Courier, monospace;
-  color: #0073e6;
-}
-
-/* Skills and Languages */
-.skills,
-.languages {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.skills div,
-.languages div {
-  width: 50%;
-}
-
-.skills div strong,
-.languages div strong {
-  color: #444;
-}
-
-/* Certification Section */
-.certification {
-  margin-bottom: 20px;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  margin-top: 20px;
-  font-size: 0.9em;
-  color: #888;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .container {
-    padding: 1rem;
-  }
-
-  h1 {
-    font-size: 2em;
-  }
-
-  .project h3 {
-    font-size: 1.2rem;
-  }
-
-  .project p,
-  .project ul li {
-    font-size: 0.9rem;
-  }
-
-  .skills div,
-  .languages div {
-    width: 100%;
-  }
-}
-
+        @media print {
+            body { padding: 0; background: none; }
+            .container { box-shadow: none; border: none; width: 100%; }
+        }
     </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="contact">
-        <h1>Pavit Kaur Sra, B.E</h1>
-        <p>
-          📞 +91 7658834855 | 
-          <a href="mailto:pavittkaursra@gmail.com">pavittkaursra@gmail.com</a> | 
-          <a href="https://www.linkedin.com/in/pavit-kaur-sra5" target="_blank">LinkedIn</a> | 
-          <a href="https://github.com/Pavitt55" target="_blank">GitHub</a>
-        </p>
-      </div>
+</head>
+<body>
 
-      <div class="section">
-        <h2>Education</h2>
-        <h3>B.E. in Computer Science & Engineering (Cloud Computing)</h3>
-        <p><strong>Chandigarh University, Kharar</strong></p>
-        <p>2020 - 2024</p>
-      </div>
-
-     <div class="section">
-  <h2>🌟 Projects</h2>
-  
-  <div class="project">
-    <h3>🎯 Number Guesser</h3>
-    <p>
-      <a href="https://github.com/Pavitt55/Number-Guesser">GitHub Repository</a>
-    </p>
-    <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
-    <ul>
-      <li>Interactive number guessing game with feedback on guesses.</li>
-      <li>
-        Players guess a number between 1-20 within 20 attempts, using 
-        <code>Math.trunc</code> and <code>Math.random</code>.
-      </li>
-      <li>
-        Designed an engaging user interface with immediate feedback (too high, too low, correct).
-      </li>
-    </ul>
-  </div>
-  
-  <div class="project">
-    <h3>🎲 Dice Roller</h3>
-    <p>
-      <a href="https://github.com/Pavitt55/Dice-Roller">GitHub Repository</a>
-    </p>
-    <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
-    <ul>
-      <li>Two-player dice game where players compete to score 20 first.</li>
-      <li>
-        Game logic includes turn resets on rolling 1 and dynamic score tracking.
-      </li>
-      <li>
-        Clean and responsive design for enhanced playability across devices.
-      </li>
-    </ul>
-  </div>
-  
-  <div class="project">
-    <h3>📁 Dynamic Portfolio Manager</h3>
-    <p>
-      <a href="https://github.com/Pavitt55/Dynamic-Portfolio-Manager">GitHub Repository</a>
-    </p>
-    <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
-    <ul>
-      <li>
-        Created a portfolio application enabling users to add, edit, and delete project cards.
-      </li>
-      <li>
-        Integrated **localStorage** for session persistence of project data.
-      </li>
-      <li>
-        Added real-time previews of project screenshots and dynamic updates.
-      </li>
-      <li>Built a user-friendly, responsive interface for seamless management.</li>
-    </ul>
-  </div>
-  
-  <div class="project">
-    <h3>💳 AccountSafe</h3>
-    <p>
-      <a href="https://github.com/Pavitt55/AccountSafe">GitHub Repository</a>
-    </p>
-    <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
-    <ul>
-      <li>Interactive bank account system with advanced JavaScript features.</li>
-      <li>
-        Implemented user authentication, transaction history, and balance updates.
-      </li>
-      <li>
-        Features include **money transfers**, **loan requests**, and account closures.
-      </li>
-      <li>Enhanced user experience with sorting, currency formatting, and timers.</li>
-    </ul>
-  </div>
-  
-  <div class="project">
-    <h3>🌐 Interactive Webpage</h3>
-    <p>
-      <a href="https://github.com/Pavitt55/Interactive-Webpage">GitHub Repository</a>
-    </p>
-    <p><strong>Technologies:</strong> HTML5, CSS, JavaScript</p>
-    <ul>
-      <li>
-        Developed a webpage with **lazy loading**, **scroll animations**, and event delegation.
-      </li>
-      <li>
-        Used advanced DOM manipulation techniques for a smooth user experience.
-      </li>
-      <li>
-        Added navigation enhancements like <code>scrollIntoView</code> for better usability.
-      </li>
-    </ul>
-  </div>
-</div>
-
-
-
-      <div class="section">
-        <h2>Skills</h2>
-        <div class="skills">
-          <div>
-            <strong>Web Development:</strong> HTML5, CSS, JavaScript, Node.js
-          </div>
-          <div><strong>Databases:</strong> MySQL</div>
-          <div><strong>Programming:</strong> C, C++, Data Structures</div>
-          <div><strong>Tools:</strong> Git, LocalStorage</div>
+<div class="container">
+    <header>
+        <h1>Pavit Kaur Sra</h1>
+        <div class="contact-info">
+            Brampton, ON (Open to Relocation) | +91 7658834855<br>
+            <a href="mailto:pavittkaursra@gmail.com">pavittkaursra@gmail.com</a> | 
+            <a href="https://linkedin.com/in/pavit-kaur-sra5">LinkedIn</a> | 
+            <a href="https://github.com/Pavitt55">GitHub</a>
         </div>
-      </div>
+    </header>
 
-      
+    <section>
+        <h2>Professional Summary</h2>
+        <p>Detail-oriented Software Engineer with a B.E. in Computer Science (Cloud Computing). Expert in building responsive, high-performance web applications using modern JavaScript (ES6+), Node.js, and AWS. Proven track record of architecting scalable front-end solutions and integrating complex REST APIs.</p>
+    </section>
 
-      <div class="section">
+    <section>
+        <h2>Technical Skills</h2>
+        <div class="skills-grid">
+            <div class="skill-cat"><strong>Languages:</strong> JavaScript (ES6+), C++, C, HTML5, CSS3/SASS</div>
+            <div class="skill-cat"><strong>Frameworks/Libs:</strong> Node.js, Express, MVC Architecture</div>
+            <div class="skill-cat"><strong>Cloud/DevOps:</strong> AWS (Cloud Practitioner), Git, GitHub</div>
+            <div class="skill-cat"><strong>Databases:</strong> MySQL, LocalStorage Persistence</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Projects</h2>
+
+        <div class="project-item">
+            <div class="project-header">
+                <h3>Forkify – Advanced Recipe Application</h3>
+                <span class="tech-stack">JS (ES6+), SASS, MVC, REST API</span>
+            </div>
+            <ul>
+                <li>Architected a complex recipe search engine using the **Model-View-Controller (MVC)** design pattern to ensure code maintainability and scalability.</li>
+                <li>Implemented advanced JavaScript features including **Async/Await**, custom Error Handling, and multi-page results pagination.</li>
+                <li>Developed features for adjusting ingredient portions dynamically and a "bookmarking" system persisted via browser API.</li>
+                <li>Optimized UI performance by implementing a custom parcel-based build workflow.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <h3>AccountSafe – Financial Management Interface</h3>
+                <span class="tech-stack">JavaScript, DOM Manipulation, CSS3</span>
+            </div>
+            <ul>
+                <li>Engineered a secure banking dashboard featuring user authentication, real-time balance calculations, and transaction filtering.</li>
+                <li>Integrated high-level functionality including simulated money transfers, loan approvals, and currency localization.</li>
+                <li>Enhanced security UX with automated session logout timers and multi-user login state management.</li>
+            </ul>
+        </div>
+
+        <div class="project-item">
+            <div class="project-header">
+                <h3>Dynamic Portfolio Manager</h3>
+                <span class="tech-stack">JavaScript, HTML5, LocalStorage</span>
+            </div>
+            <ul>
+                <li>Developed a CRUD-based application allowing users to manage project portfolios with real-time image previews.</li>
+                <li>Utilized **LocalStorage** to ensure 100% data persistence across user sessions.</li>
+                <li>Designed a fully responsive layout ensuring cross-browser compatibility and mobile-first accessibility.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Education</h2>
+        <div class="project-header">
+            <h3>Bachelor of Engineering in Computer Science (Cloud Computing)</h3>
+            <span>2020 – 2024</span>
+        </div>
+        <p>Chandigarh University | Kharar, India</p>
+    </section>
+
+    <section>
         <h2>Certifications</h2>
         <ul>
-          <li>AWS Cloud Practitioner - <strong>Amazon</strong></li>
-          <li>Soft Skills Development - <strong>DCPD, Chandigarh University</strong></li>
+            <li><strong>AWS Certified Cloud Practitioner</strong> – Amazon Web Services</li>
+            <li><strong>The Complete JavaScript Course 2024 (Jonas Schmedtmann)</strong> – Udemy</li>
+            <li><strong>Soft Skills Development</strong> – DCPD, Chandigarh University</li>
         </ul>
-      </div>
+    </section>
 
-      <footer>
-        <p>Designed by Pavit Kaur Sra © 2024</p>
-      </footer>
-    </div>
-  </body>
+    <footer>
+        <p>References available upon request</p>
+    </footer>
+</div>
+
+</body>
 </html>
