@@ -1,270 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pavit Kaur Sra - Software Engineer Resume</title>
-    <style>
-        /* CANADIAN ATS-FRIENDLY & PROFESSIONAL DESIGN */
-        body {
-            font-family: "Arial", "Helvetica", sans-serif;
-            line-height: 1.4;
-            margin: 0;
-            padding: 0;
-            background-color: #ffffff;
-            color: #1a1a1a;
-        }
-
-        .container {
-            max-width: 850px;
-            margin: 15px auto;
-            padding: 25px;
-            border: 1px solid #f0f0f0;
-        }
-
-        /* HEADER */
-        header {
-            text-align: center;
-            border-bottom: 2px solid #2c3e50;
-            padding-bottom: 12px;
-            margin-bottom: 18px;
-        }
-
-        h1 {
-            font-size: 24pt;
-            margin: 0;
-            color: #2c3e50;
-            text-transform: uppercase;
-        }
-
-        .contact-info {
-            font-size: 10pt;
-            margin-top: 6px;
-        }
-
-        .relocation-tag {
-            color: #c0392b; /* Subtle red to highlight flexibility */
-            font-weight: bold;
-        }
-
-        .contact-links {
-            margin-top: 5px;
-            font-size: 9.5pt;
-        }
-
-        .contact-links a {
-            color: #2980b9;
-            text-decoration: none;
-            margin: 0 8px;
-        }
-
-        /* SECTION HEADINGS */
-        h2 {
-            font-size: 12pt;
-            text-transform: uppercase;
-            border-bottom: 1px solid #2c3e50;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            padding-bottom: 2px;
-            color: #2c3e50;
-        }
-
-        /* SKILLS */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px;
-            font-size: 10pt;
-            margin-bottom: 15px;
-        }
-
-        /* PROJECTS */
-        .project-item {
-            margin-bottom: 16px;
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 10.5pt;
-        }
-
-        .tech-stack {
-            font-weight: normal;
-            font-style: italic;
-            font-size: 9pt;
-            color: #555;
-        }
-
-        ul {
-            margin-top: 4px;
-            padding-left: 20px;
-        }
-
-        li {
-            font-size: 9.5pt;
-            margin-bottom: 3px;
-            text-align: justify;
-        }
-
-        /* EDUCATION & CERTS */
-        .edu-cert-header {
-            display: flex;
-            justify-content: space-between;
-            font-weight: bold;
-            font-size: 10.5pt;
-        }
-
-        .cert-verify {
-            color: #2980b9;
-            font-size: 9pt;
-            text-decoration: underline;
-        }
-
-        footer {
-            margin-top: 25px;
-            text-align: center;
-            font-size: 8.5pt;
-            color: #7f8c8d;
-            border-top: 1px solid #eee;
-            padding-top: 10px;
-        }
-
-        @media print {
-            .container { border: none; margin: 0; padding: 0; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Resume of Pavit Kaur Sra, frontend developer.">
+  <title>Pavit Kaur Sra | Frontend Developer</title>
+  <style>
+    :root { --ink: #18263a; --muted: #526174; --accent: #176b68; --rule: #d8e1e7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: #eef2f4; color: var(--ink); font: 10pt/1.42 Arial, Helvetica, sans-serif; }
+    .page { max-width: 850px; margin: 24px auto; padding: 34px 46px; background: white; box-shadow: 0 8px 30px #172b3a18; }
+    header { text-align: center; border-bottom: 2px solid var(--accent); padding-bottom: 15px; }
+    h1 { margin: 0; font-size: 25pt; letter-spacing: 1.2px; text-transform: uppercase; }
+    .headline { margin: 4px 0 8px; color: var(--accent); font-size: 12pt; font-weight: 700; }
+    .contact { color: var(--muted); font-size: 9pt; }
+    a { color: inherit; text-decoration: none; }
+    .contact a { color: var(--accent); }
+    section { margin-top: 17px; }
+    h2 { margin: 0 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--rule); color: var(--accent); font-size: 11pt; letter-spacing: .8px; text-transform: uppercase; }
+    p { margin: 4px 0; }
+    .summary { color: #344458; }
+    .role, .project, .education-item, .cert { margin: 0 0 11px; }
+    .row { display: flex; justify-content: space-between; gap: 14px; align-items: baseline; }
+    .title { font-weight: 700; }
+    .date { color: var(--muted); white-space: nowrap; font-size: 9pt; }
+    .sub { color: var(--muted); font-size: 9pt; }
+    ul { margin: 5px 0 0; padding-left: 18px; }
+    li { margin: 2px 0; }
+    .skills { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 20px; }
+    .skills p { margin: 0; }
+    .project { margin-bottom: 9px; }
+    .project p { color: #344458; }
+    .note { color: var(--muted); font-size: 8.5pt; }
+    @media print {
+      @page { size: letter; margin: 0.48in; }
+      body { background: white; font-size: 9.2pt; }
+      .page { max-width: none; margin: 0; padding: 0; box-shadow: none; }
+      section { margin-top: 13px; }
+      a { color: inherit; }
+      .role, .project, .education-item, .cert { break-inside: avoid; }
+    }
+    @media (max-width: 620px) {
+      .page { margin: 0; padding: 24px 20px; }
+      .row { align-items: flex-start; flex-direction: column; gap: 0; }
+      .skills { grid-template-columns: 1fr; }
+      h1 { font-size: 21pt; }
+    }
+  </style>
 </head>
 <body>
-
-<div class="container">
+  <main class="page">
     <header>
-        <h1>Pavit Kaur Sra, B.E.</h1>
-        <div class="contact-info">
-            <span class="relocation-tag">Open to Relocation (Canada-wide)</span> | +91 7658834855
-        </div>
-        <div class="contact-links">
-            <a href="mailto:pavittkaursra@gmail.com">pavittkaursra@gmail.com</a> | 
-            <a href="https://linkedin.com/in/pavit-kaur-sra5" target="_blank">LinkedIn</a> | 
-            <a href="https://github.com/Pavitt55" target="_blank">GitHub</a>
-        </div>
+      <h1>Pavit Kaur Sra</h1>
+      <p class="headline">Frontend Developer</p>
+      <div class="contact">
+        <a href="tel:+917658834855">+91 76588 34855</a> ·
+        <a href="mailto:pavittkaursra@gmail.com">pavittkaursra@gmail.com</a><br>
+        <a href="https://linkedin.com/in/pavit-kaur-sra5">linkedin.com/in/pavit-kaur-sra5</a> ·
+        <a href="https://github.com/Pavitt55">github.com/Pavitt55</a> · Open to relocation across Canada
+      </div>
     </header>
 
     <section>
-        <h2>Technical Skills</h2>
-        <div class="skills-grid">
-            <div><strong>Languages:</strong> JavaScript (ES6+), C++, C, HTML5, CSS3/SASS</div>
-            <div><strong>Frameworks/Architecture:</strong> Node.js, MVC, OOP, REST APIs</div>
-            <div><strong>Tools:</strong> Git, GitHub, Parcel, Leaflet.js, Vite</div>
-            <div><strong>Cloud/Database:</strong> AWS (Certified), MySQL, LocalStorage API</div>
-        </div>
+      <h2>Professional Summary</h2>
+      <p class="summary">Frontend developer with professional website development experience at MVIASO since April 2025. Builds responsive web experiences using JavaScript, React, HTML, and CSS, with hands-on practice in browser automation using Playwright. Computer Science and Engineering graduate with cloud computing specialization and AWS Certified Cloud Practitioner credential.</p>
     </section>
 
     <section>
-        <h2>Technical Projects</h2>
-
-        <div class="project-item">
-            <div class="project-header">
-                <span>Forkify – Advanced Recipe & Architecture Application</span>
-                <span class="tech-stack">JavaScript (ES6+), MVC Pattern, SASS</span>
-            </div>
-            <ul>
-                <li>Engineered a complex meal-search application using the **Model-View-Controller (MVC)** design pattern.</li>
-                <li>Implemented **Async/Await** for API consumption, custom error handling, and multi-page pagination.</li>
-                <li>Developed dynamic portion-adjustment logic and a bookmarking system with data persistence.</li>
-            </ul>
-        </div>
-        
-
-        <div class="project-item">
-            <div class="project-header">
-                <span>Mapty – Geolocation Workout Tracker</span>
-                <span class="tech-stack">JS Classes (OOP), Leaflet API, Geolocation API</span>
-            </div>
-            <ul>
-                <li>Architected a fitness tracking system utilizing **Object-Oriented Programming (OOP)** for data management.</li>
-                <li>Integrated **Leaflet.js** and the Browser Geolocation API for real-time map interaction and markers.</li>
-            </ul>
-        </div>
-        
-
-        <div class="project-item">
-            <div class="project-header">
-                <span>AccountSafe – Financial Logic Interface</span>
-                <span class="tech-stack">DOM Manipulation, Intl API, Data Sorting</span>
-            </div>
-            <ul>
-                <li>Developed a secure dashboard featuring user authentication, loan requests, and transaction filtering.</li>
-                <li>Utilized the **Internationalization (Intl) API** for localized currency and date formatting.</li>
-            </ul>
-        </div>
-
-        <div class="project-item">
-            <div class="project-header">
-                <span>Dynamic Portfolio Manager</span>
-                <span class="tech-stack">JavaScript, CRUD Operations, LocalStorage</span>
-            </div>
-            <ul>
-                <li>Built a tool for managing projects with full CRUD functionality and persistent browser storage.</li>
-            </ul>
-        </div>
-
-        <div class="project-item">
-            <div class="project-header">
-                <span>Interactive High-Performance Webpage</span>
-                <span class="tech-stack">Advanced DOM, Intersection Observer API</span>
-            </div>
-            <ul>
-                <li>Optimized performance using **lazy-loading images** and smooth-scroll event delegation techniques.</li>
-            </ul>
-        </div>
-
-        <div class="project-item">
-            <div class="project-header">
-                <span>Dice Roller & Number Guesser (Game Logic)</span>
-                <span class="tech-stack">JavaScript, State Management, Math API</span>
-            </div>
-            <ul>
-                <li>Developed interactive UI logic for turn-based gameplay, score tracking, and random number generation.</li>
-            </ul>
-        </div>
+      <h2>Experience</h2>
+      <article class="role">
+        <div class="row"><span class="title">Frontend Developer · MVIASO</span><span class="date">Apr 2025 – Present</span></div>
+        <ul>
+          <li>Develop and maintain websites as part of the MVIASO team.</li>
+          <li>Contribute to multiple website projects, implementing front-end features and translating design requirements into web interfaces.</li>
+          <li>Use modern JavaScript and React alongside HTML and CSS in day-to-day development.</li>
+        </ul>
+      </article>
     </section>
 
     <section>
-        <h2>Education</h2>
-        <div class="edu-cert-header">
-            <span>B.E. in Computer Science & Engineering (Cloud Computing)</span>
-            <span>2020 – 2024</span>
-        </div>
-        <p style="margin: 2px 0; font-size: 10pt;">Chandigarh University — Kharar, India</p>
+      <h2>Selected Projects</h2>
+      <article class="project">
+        <div class="row"><span class="title">OrthoLegal · End-to-End Testing</span><span class="sub">Playwright</span></div>
+        <p>Developed and ran Playwright end-to-end tests for login and logout, CRUD operations, and forward and backward navigation, with assertions across the tested user flows.</p>
+      </article>
+      <article class="project">
+        <div class="row"><span class="title">Playwright API Testing · Practice Project</span><span class="sub">Playwright</span></div>
+        <p>Built and ran API tests in a separate practice project, using request-based checks and assertions to verify API behavior.</p>
+      </article>
+      <article class="project">
+        <div class="row"><span class="title">The Wild Oasis · Hotel Management App</span><span class="sub">React, React Query, Supabase · <a href="https://the-wildd-ooasis.netlify.app/">Live demo</a></span></div>
+        <p>Built the staff-facing hotel application for managing cabins, bookings, and guests, with data fetching, authentication, charts, and dark mode.</p>
+      </article>
+      <article class="project">
+        <div class="row"><span class="title">The Wild Oasis Website · Guest Booking Website</span><span class="sub">Next.js, React, NextAuth · <a href="https://the-wild-oasis-client-side-one.vercel.app/">Live demo</a></span></div>
+        <p>Built the guest-facing hotel website where customers can explore cabins, check availability, and make reservations, with authenticated booking flows.</p>
+      </article>
+      <article class="project">
+        <div class="row"><span class="title">Fast React Pizza · Pizza Ordering App</span><span class="sub">React, Redux Toolkit, React Router, Tailwind CSS</span></div>
+        <p>Created a pizza ordering flow with menu browsing, cart state, order placement, and route-based data loading.</p>
+      </article>
+      <article class="project">
+        <div class="row"><span class="title">WorldWise · Travel Tracker</span><span class="sub">React, React Router, Context API</span></div>
+        <p>Developed a travel tracking app for recording visited cities, viewing them on a map, and navigating location details.</p>
+      </article>
+      <article class="project">
+        <div class="row"><span class="title">Forkify · Recipe Search Application</span><span class="sub">JavaScript, MVC, SASS, REST API</span></div>
+        <p>Built an API-powered recipe application with search, pagination, adjustable servings, bookmarks, and asynchronous data handling.</p>
+      </article>
+      <article class="project">
+        <div class="row"><span class="title">Mapty · Workout Tracker</span><span class="sub">JavaScript, OOP, Leaflet</span></div>
+        <p>Created a workout tracker using browser geolocation and interactive maps to record and display activities.</p>
+      </article>
+      <article class="project">
+        <div class="row"><span class="title">Bankist · Digital Banking Interface</span><span class="sub">JavaScript, DOM, Intl API</span></div>
+        <p>Built a banking interface with account transactions, transfers, loan requests, sorting, and localized date and currency formatting.</p>
+      </article>
     </section>
 
     <section>
-        <h2>Certifications</h2>
-        <div class="project-item">
-            <div class="edu-cert-header">
-                <span>The Complete JavaScript Course 2025: From Zero to Expert!</span>
-                <a href="https://udemy-certificate.s3.amazonaws.com/pdf/UC-da2ac02c-ade8-41e0-9be6-bf033d982a03.pdf" target="_blank" class="cert-verify">Verify Certificate</a>
-            </div>
-            <p style="margin: 2px 0; font-size: 9.5pt;">Comprehensive 68.5-hour mastery of ES6+, OOP, Async JS, and the Event Loop.</p>
-        </div>
-
-        <div class="project-item">
-            <div class="edu-cert-header">
-                <span>AWS Certified Cloud Practitioner – Amazon Web Services</span>
-                <a href="https://www.credly.com/badges/537d7fde-b23b-441c-985b-771571f821a3" target="_blank" class="cert-verify">Verify Digital Badge</a>
-            </div>
-            <p style="margin: 2px 0; font-size: 9.5pt;">Verified expertise in AWS Cloud infrastructure, security, and core platform services.</p>
-        </div>
+      <h2>Technical Skills</h2>
+      <div class="skills">
+        <p><strong>Languages:</strong> JavaScript (ES6+), C++, C, HTML5, CSS3, SASS</p>
+        <p><strong>Frontend:</strong> React, Next.js, responsive web development, DOM</p>
+        <p><strong>Testing:</strong> Playwright (UI/E2E and API testing, cross-browser testing, locators, assertions, fixtures, hooks, tracing and debugging)</p>
+        <p><strong>Tools:</strong> Git, GitHub, Vite, Parcel</p>
+        <p><strong>Concepts:</strong> MVC, OOP, REST APIs, asynchronous JavaScript</p>
+        <p><strong>Other:</strong> Node.js, Leaflet.js, LocalStorage</p>
+        <p><strong>Cloud / Database:</strong> AWS, MySQL</p>
+      </div>
     </section>
 
-    <footer>
-        <p>Authorized to work in Canada | References available upon request</p>
-    </footer>
-</div>
+    <section>
+      <h2>Education</h2>
+      <div class="education-item">
+        <div class="row"><span class="title">B.E. in Computer Science &amp; Engineering, Cloud Computing</span><span class="date">2020 – 2024</span></div>
+        <p class="sub">Chandigarh University · Kharar, India</p>
+      </div>
+    </section>
 
+    <section>
+      <h2>Certifications</h2>
+      <div class="cert">
+        <div class="row"><span class="title">AWS Certified Cloud Practitioner</span><span class="sub">Amazon Web Services</span></div>
+        <p class="sub"><a href="https://www.credly.com/badges/537d7fde-b23b-441c-985b-771571f821a3">View digital badge</a></p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
-
-
